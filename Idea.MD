@@ -76,7 +76,9 @@ super.onCreate(savedInstanceState);
 setContentView(R.layout.activity_main);
 ```
 
+3、修改了各种尺寸下的APP图标，但未刷新
 
+![image-20210910144216659](https://gitee.com/yuyang201907/Imags/raw/master/image-20210910144216659.png)
 
-
+解决：删除该文件目录下的xml文件
 
