@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +39,7 @@ public class Login extends Activity {
     TextView xieyi;
     private  String userName = "1111";
     private  String pass = "1111";
-
+    private ImageView nfc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +47,10 @@ public class Login extends Activity {
         setContentView(R.layout.activity_login);
         //getSupportActionBar().setTitle("登录");
         setContentView(R.layout.activity_login); //实现跳转
+        this.getWindow().setBackgroundDrawableResource(R.drawable.a);
         cbAgree = findViewById(R.id.cb_agree);
         xieyi = findViewById(R.id.xieyi);
+        nfc=findViewById(R.id.nfc_login);
         //this.getWindow().setBackgroundDrawableResource(R.drawable.c);
         initView();
         inteData();
@@ -63,6 +66,17 @@ public class Login extends Activity {
         spannableString1.setSpan(new ForegroundColorSpan(Color.rgb(0, 51, 255)), 0, 8, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         xieyi.setText(spannableString1);
         xieyi.setMovementMethod(LinkMovementMethod.getInstance());
+        nfc.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(!cbAgree.isChecked()){
+                    Toast.makeText(Login.this,"请注意同意协议",Toast.LENGTH_LONG).show();
+                    return;
+                }
+                Intent intent = new Intent(Login.this, NFC.class);
+                startActivity(intent);
+            }
+        });
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String account = etAccount.getText().toString();

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#fff">
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="40dip" android:background="#1F1AE6E6">
+        <ImageButton android:id="@+id/btn_back"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="#1F1AE6E6" android:src="#1F1AE6E6" />
+        <View android:id="@+id/line0" android:layout_width="1px"
+            android:layout_height="fill_parent" android:layout_toRightOf="@id/btn_back"
+            android:background="#444444" />
+        <View android:layout_width="1px" android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/line0" android:background="#444444" />
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_centerInParent="true"
+            android:text="NFC卡扫描" android:textColor="#FFFFFF" android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 	<com.ant.liao.GifView android:id="@+id/nfcGif" -->
+    <!-- 		android:paddingTop="20dp" android:layout_height="wrap_content" -->
+    <!-- 		android:layout_width="wrap_content" android:layout_gravity="center" -->
+    <!-- 		android:enabled="false" /> -->
+
+    <TextView android:layout_height="match_parent"
+        android:gravity="center" android:layout_gravity="center"
+        android:layout_width="match_parent" android:paddingTop="50dp"
+        android:text="请将手机背面贴近标签进行识别" />
+</LinearLayout>
