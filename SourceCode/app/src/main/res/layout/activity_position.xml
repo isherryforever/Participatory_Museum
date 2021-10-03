@@ -4,22 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Position">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="100dp">
-        <TextView
-            android:id="@+id/btn_test"
-            style="@style/dialogmoreStyle"
-            android:textColor="#000000"
-            android:textSize="40sp"
-            android:layout_margin="15dp"
-            android:background="#1F1AE6E6"
-            android:textStyle="bold"
-            android:text="登录跳转测试"/>
+        android:layout_height="360dp"
+        android:gravity="center"
+        android:layout_marginTop="35dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_canvas"
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="姓名：XXX"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="当前位置：门口"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_draw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取位置"
+        android:layout_marginTop="50dp"
+        />
+
 </LinearLayout>

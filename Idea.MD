@@ -1,22 +1,12 @@
-
-
-### 下一步要做
-
-拿到测试接口，post/get测试。
-
-简单美化下直接交作业。
-
-
-
-
-
-**大问题：**
-
-1分钟之后会闪退，偶然发生------不常出现，不改了
-
-
-
 ### 开发记录
+
+#### 2021.10.03
+
+基本实现了全部功能，UI美化和代码精简都推给组长了。
+
+GsonFormatPlus是真的好用，和朋友很久没调出的错误很容易就解决了。
+
+
 
 #### 2021.09.20
 
@@ -106,22 +96,7 @@ xuyao       123456
 
 ### BUG记录
 
-1、Cannot fit requested classes in a single dex file (# methods: 87264 > 65536)
+> 原本记在Excel中，后来丢失了
 
-解决：在build.gradle中的defaultConfig加一句multiDexEnabled true
 
-2、莫名闪退
-
-onCreate()方法中，下面两行必须在最开始的位置
-
-```java
-super.onCreate(savedInstanceState);
-setContentView(R.layout.activity_main);
-```
-
-3、修改了各种尺寸下的APP图标，但未刷新
-
-![image-20210910144216659](https://gitee.com/yuyang201907/Imags/raw/master/image-20210910144216659.png)
-
-解决：删除该文件目录下的xml文件
 

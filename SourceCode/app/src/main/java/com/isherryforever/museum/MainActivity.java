@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-TextView quit;
+TextView quit,position,flow;
 //TextView nfc;
 //有两个需要跳转的界面，界面一显示当前孩子的位置，界面二显示挡墙客流量
     @Override
@@ -19,18 +19,12 @@ TextView quit;
         setContentView(R.layout.activity_main);
         //this.getWindow().setBackgroundDrawableResource(R.drawable.a);
         quit = findViewById(R.id.btn_quit);
-        //nfc = findViewById(R.id.btn_nfc);
-        /*nfc.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, NFC.class);
-                startActivity(intent);
-            }
-        });*/
+        position=findViewById(R.id.btn_position);
+        flow=findViewById(R.id.btn_flow);
         quit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //MediaPlayer.create(MyApplication.getAppContext(),R.raw.water).start();
+
                 SharedPreferences shared;
                 shared = MyApplication.getAppContext().getSharedPreferences("spfRecord",0);
                 int version = shared.getInt("version", 0);
@@ -41,6 +35,20 @@ TextView quit;
                 edit.putBoolean("isLogin",false);
                 edit.apply();
                 Intent intent = new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+            }
+        });
+        position.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Position.class);
+                startActivity(intent);
+            }
+        });
+        flow.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Flow.class);
                 startActivity(intent);
             }
         });
