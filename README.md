@@ -20,7 +20,7 @@
 
 略，详见res/layout 下的布局文件。
 
-主要用到了TextView（其余所有）、EditText（输入框）、CheckBox（同意协议、记住密码、自动登录）和Button（登录）控件。
+主要用到了TextView、EditText、CheckBox和Button等控件，本想加一层Webview放看板娘，画面违和感较强，所以放弃了。
 
 大多采用线性布局（LinearLayout）和水平排列（android:orientation="vertical"）。
 
